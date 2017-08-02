@@ -4,18 +4,14 @@ import { connect } from 'react-redux'
 import { searchVideos } from '../../actions/youtube'
 
 import VideoList from '../VideoList'
-import VideoSelected from '../VideoSelected'
+import VideoShow from '../VideoShow'
 
 class Home extends Component {
-  componentDidMount() {
-    // this.props.searchVideos(this.props.query)
-  }
-
   render() {
     return (
       <div className="row">
         <div className="col-md-8">
-          <VideoSelected />
+          <VideoShow />
         </div>
 
         <div className="col-md-4">

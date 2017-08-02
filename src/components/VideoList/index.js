@@ -1,11 +1,23 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
+import { selectVideo } from '../../actions/youtube'
+
+import VideoItem from './VideoItem'
 
 class VideoList extends Component {
   render() {
-    return(
-      <div>Videos list!</div>
-    )
+    let videoItems =
+      this.props.videos.map(video => {
+        return <VideoItem key={video.id.videoId} video={video}/>
+      })
+    return (<ul>{ videoItems }</ul>)
   }
 }
 
-export default VideoList
+const mapStateToProps = state => ({
+  videos: state.youtube.videos
+})
+
+export default connect(
+  mapStateToProps
+)(VideoList)

@@ -1,3 +1,4 @@
 export const RESET_VIDEOS = "RESET_VIDEOS"
 export const MORE_VIDEOS_LOADED = "MORE_VIDEOS_LOADED"
 export const CHANGE_QUERY = "CHANGE_QUERY"
+export const SET_VIDEO = "SET_VIDEO"

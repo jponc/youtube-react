@@ -1,7 +1,8 @@
 import {
   RESET_VIDEOS,
   MORE_VIDEOS_LOADED,
-  CHANGE_QUERY
+  CHANGE_QUERY,
+  SET_VIDEO
 } from '../actions/types'
 
 const INITIAL_STATE = {
@@ -14,6 +15,8 @@ const INITIAL_STATE = {
 
 export default function(state = INITIAL_STATE, action) {
   switch(action.type) {
+    case SET_VIDEO:
+      return { ...state, video: action.payload }
     case CHANGE_QUERY:
       return { ...state, query: action.payload.query }
     case RESET_VIDEOS:
