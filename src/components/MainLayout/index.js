@@ -10,7 +10,7 @@ const MainLayout = ({component: Component, ...rest}) => {
         <NavBar />
           <div className="container-fluid">
             <Component {...matchProps} />
-            <Footer />
+            {/* <Footer /> */}
           </div>
       </div>
     )} />

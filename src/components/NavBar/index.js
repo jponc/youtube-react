@@ -8,7 +8,7 @@ class NavBar extends Component {
         <div className="container-fluid">
           {/* Brand and toggle get grouped for better mobile display */}
           <div className="navbar-header">
-            <a className="navbar-brand" href="#">Youtube Box</a>
+            <a className="navbar-brand" href="/">Youtube Box</a>
           </div>
           <div className="collapse navbar-collapse">
             <SearchBar />

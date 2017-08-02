@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import { selectVideo } from '../../actions/youtube'
-
 import VideoItem from './VideoItem'
 
 class VideoList extends Component {

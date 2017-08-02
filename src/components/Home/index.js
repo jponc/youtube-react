@@ -23,7 +23,7 @@ class Home extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => ({
-  queryChanged: (ownProps.query != state.youtube.query),
+  queryChanged: (ownProps.query !== state.youtube.query),
   query: state.youtube.query,
   isLoaded: state.youtube.isLoaded
 })

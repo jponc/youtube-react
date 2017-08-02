@@ -10,7 +10,7 @@ class SearchBar extends Component {
   handleKeyPress(event) {
     this.props.changeQuery(event.target.value)
 
-    if (event.key == "Enter") {
+    if (event.key === "Enter") {
       event.preventDefault()
       this.handleSubmit()
     }

@@ -1,9 +1,8 @@
 import axios from 'axios'
-import { API_URL, YOUTUBE_API_URL, API_KEY } from './apiConfig'
+import { YOUTUBE_API_URL, API_KEY } from './apiConfig'
 import {
   CHANGE_QUERY,
   RESET_VIDEOS,
-  MORE_VIDEOS_LOADED,
   SET_VIDEO
 } from './types'
 
