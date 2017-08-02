@@ -6,6 +6,7 @@ import {
 } from './types'
 
 export function searchVideos(query) {
+  debugger
   const request = axios.get(`${YOUTUBE_API_URL}/search?key=${API_KEY}&part=snippet&q=${query}`)
 
   return dispatch => {

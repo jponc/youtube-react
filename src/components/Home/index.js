@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { searchVideos } from '../../actions/home'
+import { searchVideos } from '../../actions/youtube'
 
 import VideosList from '../VideosList'
 import VideosLoading from '../VideosLoading'
