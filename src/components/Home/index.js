@@ -1,14 +1,36 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import {} from '../../actions/home'
+import { searchVideos } from '../../actions/home'
+
+import VideosList from '../VideosList'
+import VideosLoading from '../VideosLoading'
 
 class Home extends Component {
+  componentDidMount() {
+    this.props.searchVideos(this.props.query)
+  }
+
   render() {
-    return(
-      <div>This is home</div>
-    )
+    if (this.props.isLoaded) {
+      return <VideosList />
+    } else {
+      return <VideosLoading />
+    }
   }
 }
 
-export default Home
+const mapStateToProps = state => ({
+  query: state.youtube.query,
+  isLoaded: state.youtube.isLoaded
+})
+
+const mapDispatchToProps = dispatch => bindActionCreators({
+  searchVideos
+}, dispatch)
+
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Home)
