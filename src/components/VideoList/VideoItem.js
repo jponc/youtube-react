@@ -10,9 +10,19 @@ class VideoItem extends Component {
   }
 
   render() {
+    let video = this.props.video
+
     return(
-      <li onClick={this.videoClicked.bind(this)}>
-        {this.props.video.id.videoId}
+      <li className='list-group-item' onClick={this.videoClicked.bind(this)}>
+        <div className='row'>
+          <div className='col-xs-4'>
+            <img src={video.snippet.thumbnails.default.url} />
+          </div>
+
+          <div className='col-xs-8'>
+            {video.snippet.title}
+          </div>
+        </div>
       </li>
     )
   }

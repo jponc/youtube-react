@@ -1,0 +1,7 @@
+#result-list-container .title {
+  text-align: center;
+}
+
+#result-list-container ul li {
+  cursor: pointer;
+}

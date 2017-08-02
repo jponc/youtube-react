@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import VideoPlayer from './VideoPlayer'
 import VideoDescription from './VideoDescription'
 
+import './index.css'
 
 class VideoShow extends Component {
   render() {
@@ -17,7 +18,7 @@ class VideoShow extends Component {
         <div className='container-fluid'>
           <div className='row'>
             <div className='col-md-12'>
-              <h1>{video.snippet.title}</h1>
+              <h3>{video.snippet.title}</h3>
             </div>
           </div>
           <VideoPlayer key={playerKey} video={video} />
@@ -26,7 +27,13 @@ class VideoShow extends Component {
       )
     } else {
       return(
-        <div>Search a video!</div>
+        <div className='container-fluid'>
+          <div className='row'>
+            <div className='col-md-12'>
+              <h3>Search a video!</h3>
+            </div>
+          </div>
+        </div>
       )
     }
   }

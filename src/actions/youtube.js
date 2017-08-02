@@ -14,7 +14,7 @@ export function changeQuery(query) {
 }
 
 export function searchVideos(query) {
-  const request = axios.get(`${YOUTUBE_API_URL}/search?key=${API_KEY}&part=snippet&q=${query}`)
+  const request = axios.get(`${YOUTUBE_API_URL}/search?key=${API_KEY}&part=snippet&q=${query}&type=video`)
 
   return dispatch => {
     request.then(({data}) => {

@@ -5,7 +5,7 @@ class VideoPlayer extends Component {
     return(
       <div className='row'>
         <div className='col-md-12'>
-          <p dangerouslySetInnerHTML={{__html: this.props.video.player.embedHtml}}></p>
+          <div id='video-player-iframe-container' dangerouslySetInnerHTML={{__html: this.props.video.player.embedHtml}}></div>
         </div>
       </div>
     )

@@ -6,7 +6,6 @@ import { changeQuery, searchVideos } from '../../actions/youtube'
 import './index.css'
 
 class SearchBar extends Component {
-
   handleKeyPress(event) {
     this.props.changeQuery(event.target.value)
 
