@@ -6,10 +6,12 @@ import Footer from '../Footer'
 const MainLayout = ({component: Component, ...rest}) => {
   return (
     <Route {...rest} render={matchProps => (
-      <div className="MainLayout">
+      <div>
         <NavBar />
-          <Component {...matchProps} />
-        <Footer />
+          <div className="container-fluid">
+            <Component {...matchProps} />
+            <Footer />
+          </div>
       </div>
     )} />
   )
