@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class VideosList extends Component {
+class VideoList extends Component {
   render() {
     return(
       <div>Videos list!</div>
@@ -8,4 +8,4 @@ class VideosList extends Component {
   }
 }
 
-export default VideosList
+export default VideoList
